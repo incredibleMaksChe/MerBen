@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mercedes W124 Поиск</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Поиск Mercedes W124</h1>
+    <form action="/search" method="get">
+        <input type="number" name="min_price" placeholder="Минимальная цена" value="{{ min_price }}">
+        <input type="number" name="max_price" placeholder="Максимальная цена" value="{{ max_price }}">
+        <select name="sort">
+            <option value="price" {% if sort =="price" %}selected{% endif %}>По цене</option>
+            <option value="timestamp" {% if sort =="timestamp" %}selected{% endif %}>По дате</option>
+        </select>
+        <input type="number" name="limit" placeholder="Лимит" value="{{ limit }}">
+        <button type="submit">Поиск</button>
+    </form>
+    <div class="results">
+        {% for car in cars %}
+        <div class="car">
+            <h2>{{ car.title }}</h2>
+            <p>Цена: {{ car.price }} руб.</p>
+            <p><a href="{{ car.url }}" target="_blank">Ссылка на объявление</a></p>
+            <p>Дата: {{ car.timestamp }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
