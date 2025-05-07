@@ -41,7 +41,7 @@ src/artifacts
 
 Сырые данные: src/data/raw_data.csv
 
-Для запуска веб интерфейса
+Запуск веб интерфейса
 ```bash
-uvicorn api.main:app --reload 
+uvicorn api.main:app --reload
 ```
