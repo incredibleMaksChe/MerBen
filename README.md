@@ -40,3 +40,8 @@ src/artifacts
 - `report.md` - сводный отчет по данным
 
 Сырые данные: src/data/raw_data.csv
+
+Для запуска веб интерфейса
+```bash
+uvicorn api.main:app --reload 
+```
