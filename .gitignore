@@ -3,3 +3,4 @@ data/*
 artifacts/
 venv/
 *.log
+*.log.idea/
