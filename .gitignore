@@ -2,4 +2,4 @@ data/*
 !data/raw_data.csv
 artifacts/
 venv/
-*.log
+*.log.idea/
